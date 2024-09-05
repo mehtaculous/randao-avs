@@ -1,8 +1,8 @@
-# Randao Service Manager
+# Randao AVS
 
-Welcome to the RandaoAVS.
+Welcome to the Randao AVS.
 
-This project is a simple AVS where consumers can request a random number from a future block.
+This project is a simple AVS where consumers can request a random number from a future block difficulty.
 
 Here is the current flow for this AVS:
 
@@ -11,8 +11,8 @@ Here is the current flow for this AVS:
 - Any operator who is staked to serve this AVS takes this request only once the block has been mined
 - The operator submits the block difficulty of the requested block with their signature back to the AVS
 - If the operator is in fact registered to the AVS and has the minimum needed stake, the submission is accepted
-- Then any other operator who is also staked to serve the AVS can verify that the random number provided was in fact correct
-- If there is no malicious behavior, the requested is validated
+- Then any other operator who is also staked to serve the AVS can verify that the random number provided was in fact the block difficulty of the requested block number
+- If there is no malicious behavior, the request is validated
 - If there is malicious behavior, the operator is slashed
 
 ## Quick Start
