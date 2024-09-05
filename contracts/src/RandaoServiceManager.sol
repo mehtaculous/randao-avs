@@ -28,7 +28,7 @@ contract RandaoServiceManager is
     modifier onlyOperator() {
         if (!isRegisteredOperator(msg.sender)) revert UnregisteredOperator();
         if (!hasMinWeight(msg.sender)) revert InsufficientWeight();
-        if (slashed[msg.sender]) revert InvalidOperator();
+        if (slashed[msg.sender]) revert SlashedOperator();
         _;
     }
 

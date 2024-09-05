@@ -18,10 +18,10 @@ interface IRandaoServiceManager {
     error BlockNotMined();
     error InsufficientWeight();
     error InvalidBlockNumber();
-    error InvalidOperator();
     error InvalidSlasher();
     error InvalidSignature();
     error InvalidTask();
+    error SlashedOperator();
     error UnregisteredOperator();
 
     function createTask(uint256 _blockNumber) external;
